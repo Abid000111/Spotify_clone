@@ -1,0 +1,68 @@
+.text_blur {
+	color: rgba(255, 255, 255, 0.47);
+}
+
+.w100{
+    width: calc(100vw - 339px);
+}
+
+.op{
+    opacity: 0.7;
+}
+
+.bordeR{
+    border: 2px solid red;
+}
+
+.br10{
+    border-radius: 10px;
+}
+
+.bgcR{
+    background-color: rgb(255, 0, 0);
+}
+
+.bgcB{
+    background-color: rgb(0, 0, 255);
+}
+
+.bgcY{
+    background-color: rgb(255, 187, 0);
+}
+
+.trp{
+    background-color: transparent;
+}
+
+.psab{
+    position: absolute;
+    top: 0;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.jC{
+    justify-content: center;
+}
+
+.jS{
+    justify-content: space-between;
+}
+
+.jSt{
+    justify-content: start;
+}
+
+.aC{
+    align-items: center;
+}
+
+.items-center{
+    align-items: center;
+}

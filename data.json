@@ -1,0 +1,165 @@
+{
+	"alan_walker": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Alan_Walker_-_Faded_(Jesusful.com).mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/On-My-Way-Alan-Walker-Sabrina-Carpenter-Farruko.mp3"
+		],
+		[
+			{
+				"name": "Alan Walker",
+				"listeners": "10,465,645 monthly listeners",
+				"pf_img": "alan.jpg",
+				"alt": "Alan Walker",
+				"bg_img": "alan_bg.jpeg",
+				"song_1": "Faded",
+				"time_1": "3:32",
+				"img_1": "faded.jpg",
+				"view_1": "86,875,487",
+				"song_2": "On My Way",
+				"time_2": "3:13",
+				"img_2": "onmyway.jpeg",
+				"view_2": "76,584,568",
+				"bg": "linear-gradient(12deg, rgba(0,0,0,1) 16%, rgba(48,48,56,1) 36%, rgba(61,63,106,1) 52%, rgba(54,59,130,1) 60%, rgba(33,41,173,1) 69%, rgba(39,49,235,1) 84%, rgba(0,14,255,1) 97%) "
+			}
+		]
+	],
+	"arijit_singh": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Saware_-_Phantom_128_Kbps.mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Shayad_-_Love_Aaj_Kal_128_Kbps.mp3"
+		],
+		[
+			{
+				"name": "Arijit Singh",
+				"listeners": "24,768,943 monthly listeners",
+				"pf_img": "arijit.png",
+				"alt": "Arijit Singh",
+				"bg_img": "arijit_bg.jpg",
+				"song_1": "Saware",
+				"time_1": "5:21",
+				"img_1": "saware.jpeg",
+				"view_1": "35,425,473",
+				"song_2": "Shayad",
+				"time_2": "4:08",
+				"img_2": "shayad.jpg",
+				"view_2": "68,756,757",
+				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 9%, rgba(11,32,71,1) 41%, rgba(17,54,122,1) 77%, rgba(74,29,184,1) 93%, rgba(78,29,195,1) 100%)"
+			}
+		]
+	],
+	"armaan_malik": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Bol%20Do%20Na%20Zara%20-%20Azhar_128-(DJMaza).mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Wajah%20Tum%20Ho%20(Hate%20Story%203)_64-(PagalWorld.Ink).mp3"
+		],
+		[
+			{
+				"name": "Armaan Malik",
+				"listeners": "80,765,545 monthly listeners",
+				"pf_img": "armaan.jpg",
+				"alt": "Armaan Malik",
+				"bg_img": "armaan_bg.webp",
+				"song_1": "Bol Do Na Zara",
+				"time_1": "4:52",
+				"img_1": "boldonazara.jpg",
+				"view_1": "4,536,587",
+				"song_2": "Wajah Tum Ho",
+				"time_2": "5:57",
+				"img_2": "wajahtumho.jpg",
+				"view_2": "4,538,486",
+				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(66,25,63,1) 67%, rgba(255,0,18,1) 100%)"
+			}
+		]
+	],
+	"atif_aslam": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Aadat_(Jal039s_Version)_(Kalyug)_128_Kbps.mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Tu_Jaane_Na_-_Ajab_Prem_Ki_Ghazab_Kahani_128_Kbps.mp3"
+		],
+		[
+			{
+				"name": "Atif Aslam",
+				"listeners": "32,261,140 monthly listeners",
+				"pf_img": "atif.jpg",
+				"alt": "Atif Aslam",
+				"bg_img": "atif_bg.jpg",
+				"song_1": "Aadat",
+				"time_1": "4:32",
+				"img_1": "aadat.jpg",
+				"view_1": "68,759,765",
+				"song_2": "Tu Jaane Na",
+				"time_2": "5:41",
+				"img_2": "tujaanena.jpeg",
+				"view_2": "9,867,865",
+				"bg": "linear-gradient(193deg, rgba(0,0,0,1) 0%, rgba(55,56,70,1) 14%, rgba(71,74,126,1) 29%, rgba(54,59,130,1) 49%, rgba(33,41,173,1) 68%, rgba(39,49,235,1) 89%, rgba(0,14,255,1) 100%)"
+			}
+		]
+	],
+	"ed_sheeran": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ed%20Sheeran%20-%20Perfect_cNGjD0VG4R8.mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ed_Sheera_-_Shape_of_You_Waptrik.com.ng.mp3"
+		],
+		[
+			{
+				"name": "Ed Sheeran",
+				"listeners": "52,260,148 monthly listeners",
+				"pf_img": "ed_sheeran.jpeg",
+				"alt": "Ed Sheeran",
+				"bg_img": "ed_bg.jpg",
+				"song_1": "Perfect",
+				"time_1": "4:23",
+				"img_1": "perfect.jpg",
+				"view_1": "50,965,476",
+				"song_2": "Shape Of You",
+				"time_2": "4:22",
+				"img_2": "shapeofyou.jpg",
+				"view_2": "86,674,876",
+				"bg": "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(12,0,255,1) 67%, rgba(0,176,255,1) 100%)"
+			}
+		]
+	],
+	"jasleen_royal": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3"
+		],
+		[
+			{
+				"name": "Jasleen Royal",
+				"listeners": "2,160,040 monthly listeners",
+				"pf_img": "jasleen.jpeg",
+				"alt": "Jasleen Royal",
+				"bg_img": "jasleen_bg.jpg",
+				"song_1": "Ranjha",
+				"time_1": "3:48",
+				"img_1": "ranjha.jpeg",
+				"view_1": "8,754,808",
+				"bg": "linear-gradient(188deg, rgba(113,21,21,1) 0%, rgba(0,0,0,1) 0%, rgba(113,21,21,1) 0%, rgba(113,21,21,1) 23%, rgba(185,81,81,1) 54%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)"
+			}
+		]
+	],
+	"ali_gatie": [
+		[
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ali%20Gatie%20%E2%80%93%20It%E2%80%99s%20You_(Naijaflavour.com).mp3",
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Recording.m4a"
+		],
+		[
+			{
+				"name": "Ali Gatie",
+				"listeners": "46,599,465 monthly listeners",
+				"pf_img": "ali.jpeg",
+				"alt": "Ali Gatie",
+				"bg_img": "ali_bg.jpg",
+				"song_1": "It's You",
+				"time_1": "3:34",
+				"img_1": "itsyou.jpg",
+				"view_1": "65,487,687",
+				"song_2": "What If I Told You That I Love You",
+				"time_2": "3:19",
+				"img_2": "whatifitoldyou.jpg",
+				"view_2": "86,097,875",
+				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 4%, rgba(103,109,210,1) 55%, rgba(43,219,146,0.6783088235294117) 100%)"
+			}
+		]
+	]
+}
