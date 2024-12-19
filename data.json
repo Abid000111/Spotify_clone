@@ -8,16 +8,16 @@
 			{
 				"name": "Alan Walker",
 				"listeners": "10,465,645 monthly listeners",
-				"pf_img": "alan.jpg",
+				"pf_img": "alan.webp",
 				"alt": "Alan Walker",
-				"bg_img": "alan_bg.jpeg",
+				"bg_img": "alan_bg.webp",
 				"song_1": "Faded",
 				"time_1": "3:32",
-				"img_1": "faded.jpg",
+				"img_1": "faded.webp",
 				"view_1": "86,875,487",
 				"song_2": "On My Way",
 				"time_2": "3:13",
-				"img_2": "onmyway.jpeg",
+				"img_2": "onmyway.webp",
 				"view_2": "76,584,568",
 				"bg": "linear-gradient(12deg, rgba(0,0,0,1) 16%, rgba(48,48,56,1) 36%, rgba(61,63,106,1) 52%, rgba(54,59,130,1) 60%, rgba(33,41,173,1) 69%, rgba(39,49,235,1) 84%, rgba(0,14,255,1) 97%) "
 			}
@@ -32,16 +32,16 @@
 			{
 				"name": "Arijit Singh",
 				"listeners": "24,768,943 monthly listeners",
-				"pf_img": "arijit.png",
+				"pf_img": "arijit.webp",
 				"alt": "Arijit Singh",
-				"bg_img": "arijit_bg.jpg",
+				"bg_img": "arijit_bg.webp",
 				"song_1": "Saware",
 				"time_1": "5:21",
-				"img_1": "saware.jpeg",
+				"img_1": "saware.webp",
 				"view_1": "35,425,473",
 				"song_2": "Shayad",
 				"time_2": "4:08",
-				"img_2": "shayad.jpg",
+				"img_2": "shayad.webp",
 				"view_2": "68,756,757",
 				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 9%, rgba(11,32,71,1) 41%, rgba(17,54,122,1) 77%, rgba(74,29,184,1) 93%, rgba(78,29,195,1) 100%)"
 			}
@@ -56,16 +56,16 @@
 			{
 				"name": "Armaan Malik",
 				"listeners": "80,765,545 monthly listeners",
-				"pf_img": "armaan.jpg",
+				"pf_img": "armaan.webp",
 				"alt": "Armaan Malik",
 				"bg_img": "armaan_bg.webp",
 				"song_1": "Bol Do Na Zara",
 				"time_1": "4:52",
-				"img_1": "boldonazara.jpg",
+				"img_1": "boldonazara.webp",
 				"view_1": "4,536,587",
 				"song_2": "Wajah Tum Ho",
 				"time_2": "5:57",
-				"img_2": "wajahtumho.jpg",
+				"img_2": "wajahtumho.webp",
 				"view_2": "4,538,486",
 				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(66,25,63,1) 67%, rgba(255,0,18,1) 100%)"
 			}
@@ -80,16 +80,16 @@
 			{
 				"name": "Atif Aslam",
 				"listeners": "32,261,140 monthly listeners",
-				"pf_img": "atif.jpg",
+				"pf_img": "atif.webp",
 				"alt": "Atif Aslam",
-				"bg_img": "atif_bg.jpg",
+				"bg_img": "atif_bg.webp",
 				"song_1": "Aadat",
 				"time_1": "4:32",
-				"img_1": "aadat.jpg",
+				"img_1": "aadat.webp",
 				"view_1": "68,759,765",
 				"song_2": "Tu Jaane Na",
 				"time_2": "5:41",
-				"img_2": "tujaanena.jpeg",
+				"img_2": "tujaanena.webp",
 				"view_2": "9,867,865",
 				"bg": "linear-gradient(193deg, rgba(0,0,0,1) 0%, rgba(55,56,70,1) 14%, rgba(71,74,126,1) 29%, rgba(54,59,130,1) 49%, rgba(33,41,173,1) 68%, rgba(39,49,235,1) 89%, rgba(0,14,255,1) 100%)"
 			}
@@ -104,16 +104,16 @@
 			{
 				"name": "Ed Sheeran",
 				"listeners": "52,260,148 monthly listeners",
-				"pf_img": "ed_sheeran.jpeg",
+				"pf_img": "ed_sheeran.webp",
 				"alt": "Ed Sheeran",
-				"bg_img": "ed_bg.jpg",
+				"bg_img": "ed_bg.webp",
 				"song_1": "Perfect",
 				"time_1": "4:23",
-				"img_1": "perfect.jpg",
+				"img_1": "perfect.webp",
 				"view_1": "50,965,476",
 				"song_2": "Shape Of You",
 				"time_2": "4:22",
-				"img_2": "shapeofyou.jpg",
+				"img_2": "shapeofyou.webp",
 				"view_2": "86,674,876",
 				"bg": "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(12,0,255,1) 67%, rgba(0,176,255,1) 100%)"
 			}
@@ -127,12 +127,12 @@
 			{
 				"name": "Jasleen Royal",
 				"listeners": "2,160,040 monthly listeners",
-				"pf_img": "jasleen.jpeg",
+				"pf_img": "jasleen.webp",
 				"alt": "Jasleen Royal",
-				"bg_img": "jasleen_bg.jpg",
+				"bg_img": "jasleen_bg.webp",
 				"song_1": "Ranjha",
 				"time_1": "3:48",
-				"img_1": "ranjha.jpeg",
+				"img_1": "ranjha.webp",
 				"view_1": "8,754,808",
 				"bg": "linear-gradient(188deg, rgba(113,21,21,1) 0%, rgba(0,0,0,1) 0%, rgba(113,21,21,1) 0%, rgba(113,21,21,1) 23%, rgba(185,81,81,1) 54%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)"
 			}
@@ -147,16 +147,16 @@
 			{
 				"name": "Ali Gatie",
 				"listeners": "46,599,465 monthly listeners",
-				"pf_img": "ali.jpeg",
+				"pf_img": "ali.webp",
 				"alt": "Ali Gatie",
-				"bg_img": "ali_bg.jpg",
+				"bg_img": "ali_bg.webp",
 				"song_1": "It's You",
 				"time_1": "3:34",
-				"img_1": "itsyou.jpg",
+				"img_1": "itsyou.webp",
 				"view_1": "65,487,687",
 				"song_2": "What If I Told You That I Love You",
 				"time_2": "3:19",
-				"img_2": "whatifitoldyou.jpg",
+				"img_2": "whatifitoldyou.webp",
 				"view_2": "86,097,875",
 				"bg": "linear-gradient(0deg, rgba(0,0,0,1) 4%, rgba(103,109,210,1) 55%, rgba(43,219,146,0.6783088235294117) 100%)"
 			}

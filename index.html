@@ -3,37 +3,40 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Spotify</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="utility.css" />
 	</head>
 	<body>
-		<div id="container" class="flex">
-			<div class="left br10 flex column">
-				<div class="upper br10 flex column jS">
+		<div id="container">
+			<div class="left">
+				<div class="upper">
 					<div id="spotify">
-						<img src="logo.svg" alt="Spotify" />
+						<img src="logo.svg" alt="Spotify" loading="lazy" />
 					</div>
 					<div class="svg">
-						<img src="home.svg" alt="Home" />
+						<img src="home.svg" alt="Home" loading="lazy" />
 						Home
 					</div>
-					<div class="svg op">
-						<img src="search.svg" alt="Search" />
-						Search
+
+					<div id="search_box">
+						<input id="search_text" type="text" placeholder="Search" />
+						<div id="search_icon" class="search_icon">
+							<img id="search_svg" src="search.svg" alt="Search" loading="lazy" />
+						</div>
+						<div id="search_click1" class="search_click">
+							Website is under development
+						</div>
 					</div>
 				</div>
-				<div class="bottom br10">
-					<div class="flex bottom1">
-						<div id="collapse" class="collapse">
-							<p>Collapse Your Library</p>
-						</div>
+				<div class="bottom">
+					<div class="bottom1">
 						<div id="library" class="svg op">
-							<img src="library.svg" alt="Library" />
+							<img src="library.svg" alt="Library" loading="lazy" />
 							Your Library
 						</div>
 						<div class="plus op">
-							<img src="plus.svg" alt="" />
+							<img src="plus.svg" alt="Plus" loading="lazy" />
 						</div>
 					</div>
 					<div class="bottom2">
@@ -84,7 +87,7 @@
 
 							<div id="cookies" class="op">Cookies</div>
 							<button id="english" class="flex">
-								<img src="english.svg" alt="" />
+								<img src="english.svg" alt="english" loading="lazy" />
 								English
 							</button>
 						</div>
@@ -95,12 +98,27 @@
 				<div class="nav flex aC jS">
 					<div class="nav_button">
 						<div id="back" class="back_arrow">
-							<img src="arrow.svg" alt="" />
+							<img src="arrow.svg" alt="arrow" loading="lazy" />
 							<div id="back_hidden" class="back_hidden">Go back</div>
 						</div>
 						<div id="forward" class="forward_arrow">
-							<img src="arrow.svg" alt="" />
+							<img src="arrow.svg" alt="arrow" loading="lazy" />
 							<div id="forward_hidden" class="forward_hidden">Go forward</div>
+						</div>
+					</div>
+
+					<div id="new_nav">
+						<div id="spotify_nav">
+							<img src="favicon.ico" alt="Spotify" loading="lazy" />
+						</div>
+						<div id="search_box_nav">
+							<input id="search_text_nav" type="text" placeholder="Search" />
+							<div id="search_icon_nav" class="search_icon">
+								<img id="search_svg" src="search.svg" alt="Search" loading="lazy" />
+							</div>
+							<div id="search_click2" class="search_click">
+								Website is under development
+							</div>
 						</div>
 					</div>
 					<div class="nav_login flex aC">
@@ -112,18 +130,15 @@
 					<div class="right_content">
 						<div class="content_upper">
 							<div class="content_upper_left">
-								<p>Popular artists</p>
-							</div>
-							<div class="content_upper_right">
-								<p>Show all</p>
+								<p>Popular Artists</p>
 							</div>
 						</div>
 						<div class="content_section">
 							<div id="armaan_malik" class="content">
 								<div class="content_img child">
-									<img src="armaan.jpg" alt="Armaan Malik" />
+									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -133,9 +148,9 @@
 							</div>
 							<div id="ed_sheeran" class="content">
 								<div class="content_img child">
-									<img src="ed_sheeran.jpeg" alt="Ed Sheeran" />
+									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -145,9 +160,9 @@
 							</div>
 							<div id="arijit_singh" class="content">
 								<div class="content_img child">
-									<img src="arijit.png" alt="Arijit Singh" />
+									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -155,11 +170,11 @@
 									<h4>Artist</h4>
 								</div>
 							</div>
-							<div id="jasleen_royal" class="content content_5">
+							<div id="jasleen_royal" class="content content_4">
 								<div class="content_img child">
-									<img src="jasleen.jpeg" alt="Jasleen Royal" />
+									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -167,11 +182,11 @@
 									<h4>Artist</h4>
 								</div>
 							</div>
-							<div id="atif_aslam" class="content content_6">
+							<div id="atif_aslam" class="content content_5">
 								<div class="content_img child">
-									<img src="atif.jpg" alt="Atif Aslam" />
+									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -179,11 +194,11 @@
 									<h4>Artist</h4>
 								</div>
 							</div>
-							<div id="alan_walker" class="content content_7">
+							<div id="alan_walker" class="content content_6">
 								<div class="content_img child">
-									<img src="alan.jpg" alt="Alan Walker" />
+									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -191,11 +206,290 @@
 									<h4>Artist</h4>
 								</div>
 							</div>
-							<div id="ali_gatie" class="content">
+							<div id="ali_gatie" class="content content_7">
 								<div class="content_img child">
-									<img src="ali.jpeg" alt="Ali Gatie" />
+									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
 									<div class="content_play child">
-										<img src="play.svg" alt="Play" />
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ali Gatie</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right_content">
+						<div class="content_upper">
+							<div class="content_upper_left">
+								<p>Popular Artists</p>
+							</div>
+						</div>
+						<div class="content_section">
+							<div id="armaan_malik" class="content">
+								<div class="content_img child">
+									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Armaan Malik</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ed_sheeran" class="content">
+								<div class="content_img child">
+									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ed Sheeran</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="arijit_singh" class="content">
+								<div class="content_img child">
+									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Arijit Singh</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="jasleen_royal" class="content content_4">
+								<div class="content_img child">
+									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Jasleen Royal</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="atif_aslam" class="content content_5">
+								<div class="content_img child">
+									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Atif Aslam</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="alan_walker" class="content content_6">
+								<div class="content_img child">
+									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Alan Walker</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ali_gatie" class="content content_7">
+								<div class="content_img child">
+									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ali Gatie</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right_content">
+						<div class="content_upper">
+							<div class="content_upper_left">
+								<p>Popular Artists</p>
+							</div>
+						</div>
+						<div class="content_section">
+							<div id="armaan_malik" class="content">
+								<div class="content_img child">
+									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Armaan Malik</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ed_sheeran" class="content">
+								<div class="content_img child">
+									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ed Sheeran</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="arijit_singh" class="content">
+								<div class="content_img child">
+									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Arijit Singh</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="jasleen_royal" class="content content_4">
+								<div class="content_img child">
+									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Jasleen Royal</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="atif_aslam" class="content content_5">
+								<div class="content_img child">
+									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Atif Aslam</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="alan_walker" class="content content_6">
+								<div class="content_img child">
+									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Alan Walker</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ali_gatie" class="content content_7">
+								<div class="content_img child">
+									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ali Gatie</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right_content">
+						<div class="content_upper">
+							<div class="content_upper_left">
+								<p>Popular Artists</p>
+							</div>
+						</div>
+						<div class="content_section">
+							<div id="armaan_malik" class="content">
+								<div class="content_img child">
+									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Armaan Malik</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ed_sheeran" class="content">
+								<div class="content_img child">
+									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Ed Sheeran</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="arijit_singh" class="content">
+								<div class="content_img child">
+									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Arijit Singh</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="jasleen_royal" class="content content_4">
+								<div class="content_img child">
+									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Jasleen Royal</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="atif_aslam" class="content content_5">
+								<div class="content_img child">
+									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Atif Aslam</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="alan_walker" class="content content_6">
+								<div class="content_img child">
+									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
+									</div>
+								</div>
+								<div class="content_name child">
+									<h3>Alan Walker</h3>
+									<h4>Artist</h4>
+								</div>
+							</div>
+							<div id="ali_gatie" class="content content_7">
+								<div class="content_img child">
+									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
+									<div class="content_play child">
+										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
 								</div>
 								<div class="content_name child">
@@ -212,100 +506,3 @@
 		<script src="script.js"></script>
 	</body>
 </html>
-
-<!-- <div class="right_content">
-	<div class="content_upper">
-		<div class="content_upper_left">
-			<p>Popular songs</p>
-		</div>
-		<div class="content_upper_right">
-			<p>Show all</p>
-		</div>
-	</div>
-	<div class="content_section">
-		<div class="content">
-			<div class="song_img content_img">
-				<img src="pal.jpeg" alt="Pal" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Pal</h3>
-				<h4>Song</h4>
-			</div>
-		</div>
-		<div class="content">
-			<div class="content_img">
-				<img src="jubin.jpg" alt="Jubin Nautiyal" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Jubin Nautiyal</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-		<div class="content">
-			<div class="content_img">
-				<img src="taylor.jpg" alt="Taylor Swift" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Taylor Swift</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-		<div class="content">
-			<div class="content_img">
-				<img src="arijit.png" alt="Arijit Singh" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Arijit Singh</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-		<div class="content content_5">
-			<div class="content_img">
-				<img src="darshan.jpeg" alt="Darshan Raval" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Darshan Raval</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-		<div class="content content_6">
-			<div class="content_img">
-				<img src="atif.jpg" alt="Atif Aslam" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Atif Aslam</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-		<div class="content content_7">
-			<div class="content_img">
-				<img src="armaan.jpg" alt="Armaan Malik" />
-				<div class="content_play">
-					<img src="play.svg" alt="Play" />
-				</div>
-			</div>
-			<div class="content_name">
-				<h3>Armaan Malik</h3>
-				<h4>Artist</h4>
-			</div>
-		</div>
-	</div>
-</div> -->

@@ -1,86 +1,35 @@
-let library = document.getElementById("library");
-let collapse = document.getElementById("collapse");
-let back = document.getElementById("back");
-let forward = document.getElementById("forward");
-let f_hid = document.getElementById("forward_hidden");
-let b_hid = document.getElementById("back_hidden");
+let total_time = document.getElementById("total_time");
+let time_played = document.getElementById("time_played");
+let audio = new Audio();
+let playBtn = document.getElementById("play");
+let previousBtn = document.getElementById("previous");
+let nextBtn = document.getElementById("next");
 
-library.addEventListener("mouseenter", () => {
-	collapse.style.display = "flex";
-});
+function getRandomHexColor() {
+	return `#${Math.floor(Math.random() * 16777215)
+		.toString(16)
+		.padStart(6, "0")}`;
+}
 
-library.addEventListener("mouseleave", () => {
-	collapse.style.display = "none";
-});
+let secondsToMinutesSeconds = function (seconds) {
+	if (isNaN(seconds) || seconds < 0) {
+		return "Invalid input";
+	}
 
-back.addEventListener("mouseenter", () => {
-	b_hid.style.display = "flex";
-});
+	const minutes = Math.floor(seconds / 60);
+	const remaininSeconds = Math.floor(seconds % 60);
 
-back.addEventListener("mouseleave", () => {
-	b_hid.style.display = "none";
-});
+	const formattedMinutes = String(minutes).padStart(2, "0");
+	const formattedSeconds = String(remaininSeconds).padStart(2, "0");
 
-forward.addEventListener("mouseenter", () => {
-	f_hid.style.display = "flex";
-});
+	return `${formattedMinutes}:${formattedSeconds}`;
+};
 
-forward.addEventListener("mouseleave", () => {
-	f_hid.style.display = "none";
-});
-
-// async function getSongs() {
-// 	let a = await fetch("http://127.0.0.1:3000/songs/alan_walker/");
-// 	let response = await a.text();
-// 	let div = document.createElement("div");
-// 	div.innerHTML = response;
-// 	let as = div.getElementsByTagName("a");
-// 	console.log(as);
-// 	let songs = [];
-// 	for (let i = 0; i < as.length; i++) {
-// 		const element = as[i];
-// 		// console.log("element", i, "==>", element);
-// 		// if (!element.href.endsWith("http://127.0.0.1:3000/")) {
-// 		if (element.href.endsWith(".mp3")) {
-// 			songs.push(element.href);
-// 		}
-// 		// songs.push(element.href);
-// 		// console.log(songs);
-// 	}
-// 	console.log(songs);
-// 	return songs;
-// }
-
-// getSongs();
-
-// async function data() {
 async function fetchData() {
 	let data = await fetch("http://127.0.0.1:3000/data.json/");
 	let info = await data.json();
-	// console.log(info.alan_walker[0]);
-	// console.log(info);
-
-	// var audio = new Audio(info.alan_walker[0]);
 	return info;
 }
-
-// fetchData();
-
-// async function main(artist, number) {
-// 	let songs = await data();
-// 	console.log(songs);
-// 	var audio = new Audio(songs[artist][0][number]);
-// 	audio.play();
-
-// 	let audioPlayer = document.getElementById("audioPlayer");
-// 	// audioPlayer.setAttribute;
-// 	audioPlayer.src = songs.alan_walker[0];
-// 	// audioPlayer.play();
-// }
-
-// main();
-
-// let page = "";
 
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll(".content").forEach((element) => {
@@ -89,18 +38,154 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (clicked_elem) {
 				const parent_id = clicked_elem.closest(".content").id;
 				console.log(parent_id);
-				// page = parent_id;
-				// console.log("page =>", page);
 				localStorage.setItem("parent_id", parent_id);
 				window.location.href = "index2.html";
 			}
 		});
 	});
+
+	document.querySelectorAll(".search_icon").forEach((element) => {
+		element.addEventListener("click", (event) => {
+			const parentId = event.target.parentElement.id; // Get the parent element's ID
+			console.log(parentId);
+			if (parentId == "search_icon") {
+				document.getElementById("search_click1").style.display = "block";
+				setTimeout(() => {
+					document.getElementById("search_click1").style.display = "none";
+				}, 1500);
+			} else if (parentId == "search_icon_nav") {
+				document.getElementById("search_click2").style.display = "block";
+				setTimeout(() => {
+					document.getElementById("search_click2").style.display = "none";
+				}, 1500);
+			}
+		});
+	});
+
+	document.getElementById("container").addEventListener("click", (e) => {
+		const parentId = e.target.parentElement.id;
+		if (parentId == "forward") {
+			window.history.forward();
+		} else if (parentId == "back") {
+			window.history.back();
+		}
+	});
+
 	if (window.location.pathname.endsWith("index2.html")) {
 		setTimeout(() => {
+			document.getElementById("container").addEventListener("click", (e) => {
+				const parentId = e.target.parentElement.id;
+				if (e.target.id === "home") {
+					window.history.back();
+				} else if (parentId == "search_icon") {
+					document.getElementById("search_click1").style.display = "block";
+					setTimeout(() => {
+						document.getElementById("search_click1").style.display = "none";
+					}, 1500);
+				} else if (parentId == "back") {
+					window.history.back();
+				}
+			});
+
+			// Array of 5 vibrant colors
+			const colors = ["#ff0080", "#00ffbf", "#8000ff", "#ffbf00", "#00bfff"]; // Array of 5 vibrant colors
+			let previous_playedSong = null; // Keeps track of the previously played song
+			let colorInterval = null; // Holds the interval to change colors
+
+			// Function to change box shadow color every 1 second
+			function changeBoxShadowColor(element) {
+				let randomIndex = Math.floor(Math.random() * colors.length);
+				element.style.boxShadow = `0px 0px 17px 5px ${colors[randomIndex]}`; // Set box shadow color
+				document.getElementById("play_bar").style.backgroundColor =
+					colors[randomIndex]; // Sync color with play_bar
+			}
+
+			// Function to add and manage box shadow and border on selected song
+			function songShadow(playedSong) {
+				if (previous_playedSong) {
+					previous_playedSong.style.border = "none";
+					previous_playedSong.style.backgroundColor = "";
+					previous_playedSong.style.boxShadow = "none"; // Remove box shadow from the previous song
+					clearInterval(colorInterval); // Stop previous interval
+				}
+
+				previous_playedSong = document.getElementById(playedSong);
+
+				// Add border and background color
+				previous_playedSong.style.border = "1px solid black";
+				previous_playedSong.style.backgroundColor = "rgba(99, 99, 99, 0.356)";
+
+				// Start changing box shadow and play_bar background color every 1 second
+				changeBoxShadowColor(previous_playedSong); // Set initial color
+				colorInterval = setInterval(() => {
+					changeBoxShadowColor(previous_playedSong);
+				}, 350);
+			}
+
+			// Function to change background color randomly
+			function changeBackgroundColor() {
+				const playBar = document.getElementById("play_bar");
+				if (playBar) {
+					const randomIndex = Math.floor(Math.random() * colors.length);
+					playBar.style.backgroundColor = colors[randomIndex];
+				}
+			}
+
+			// Change background color every 1 second
+			setInterval(changeBackgroundColor, 350);
+
+			const visualizer = document.getElementById("visualizer");
+
+			const NUM_BARS = 15;
+
+			// Create bars and balls dynamically
+			for (let i = 0; i < NUM_BARS; i++) {
+				const bar = document.createElement("div");
+				bar.classList.add("bar");
+				bar.style.height = `${Math.random() * 0 + 100}px`;
+
+				const ball = document.createElement("div");
+				ball.classList.add("ball");
+				bar.appendChild(ball);
+
+				visualizer.appendChild(bar);
+			}
+
+			const bars = document.querySelectorAll(".bar");
+
+			const randomizeHeights = () => {
+				bars.forEach((bar) => {
+					const maxHeight = window.innerHeight * 0.56; // Calculate 56vh dynamically
+					const height = Math.random() * maxHeight + 20; // Random height between 20px and 56vh
+					bar.style.height = `${height}px`;
+					bar.style.background = `${getRandomHexColor()}`;
+				});
+			};
+
+			let interval;
+
+			let playBtnFunc = function () {
+				if (audio.src == "") {
+					playBtn.src = "song_play.svg";
+					playBtn.style.pointerEvents = "none";
+					previousBtn.style.pointerEvents = "none";
+					nextBtn.style.pointerEvents = "none";
+					document.getElementById("circle").style.display = "none";
+				} else {
+					playBtn.src = "pause.svg";
+					playBtn.style.pointerEvents = "auto";
+					previousBtn.style.pointerEvents = "auto";
+					nextBtn.style.pointerEvents = "auto";
+					document.getElementById("circle").style.display = "block";
+				}
+			};
+
+			playBtnFunc();
+
 			async function new_page() {
-				let data = await fetch("http://127.0.0.1:3000/data.json/");
-				let info = await data.json();
+				// let data = await fetch("http://127.0.0.1:3000/data.json/");
+				// let info = await data.json();
+				let info = await fetchData();
 				// console.log(info[localStorage.parent_id][1][0]);
 				let bg_img = document.querySelector("#bg_img img");
 				// let pf_img = document.querySelector("#pf_img img");
@@ -358,45 +443,161 @@ document.addEventListener("DOMContentLoaded", () => {
 					time_key = "time_";
 				}
 
-				async function main(artist, number, clickedSong) {
-					const clickedSongId = document.getElementById(clickedSong);
-					// console.log(clickedSongId);
+				let currentSong;
+				let clickedSong;
+				let song_no;
+				let artist;
+				let song_name;
+				let clickedSongId;
+				let clickedSongText;
+
+				async function main(artist, number, clickedSong, song_name) {
+					// Stop and clean up the previous song if it's playing
+					if (currentSong) {
+						currentSong.pause();
+						currentSong.currentTime = 0;
+						clearInterval(interval);
+						clickedSongId.style.display = "flex";
+						clickedSongText.style.color = "white";
+					}
+
+					clickedSongId = document.getElementById(`play_alt${number + 1}`);
 					clickedSongId.style.display = "none";
+					clickedSongText = document.getElementById(song_name);
+					clickedSongText.style.color = "greenyellow";
 					let songs = await fetchData();
-					// console.log(songs);
-					var audio = new Audio(songs[artist][0][number]);
+					audio.src = songs[artist][0][number];
+
 					audio.play();
+
+					currentSong = audio;
+
+					let playedSong = `list${number + 1}`;
+
+					songShadow(playedSong);
+
+					interval = setInterval(randomizeHeights, 200); // Randomize heights every 200ms
+
+					let track_name = "song_" + `${number + 1}`;
+					document.getElementById("song_name").innerHTML =
+						"Song: " + songs[artist][1][0][track_name];
+
+					playBtnFunc();
+
+					audio.addEventListener("timeupdate", () => {
+						time_played.innerHTML = `${secondsToMinutesSeconds(audio.currentTime)}`;
+						let total_time_var;
+						total_time_var = `${secondsToMinutesSeconds(audio.duration)}`;
+						total_time.innerText = total_time_var;
+
+						document.querySelector("#circle").style.left =
+							(audio.currentTime / audio.duration) * 100 + "%";
+					});
+
+					document.querySelector(".seekbar").addEventListener("click", (e) => {
+						let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+						document.querySelector("#circle").style.left = percent + "%";
+						audio.currentTime = (audio.duration * percent) / 100;
+					});
 
 					audio.addEventListener("ended", function () {
 						clickedSongId.style.display = "flex";
+						clickedSongText.style.color = "white";
+						playBtn.src = "song_play.svg";
+						clearInterval(interval);
+						bars.forEach((bar) => {
+							bar.style.height = "50px"; // Reset to default height
+						});
 					});
 				}
 
-				// const play = document.getElementById("play_alt");
+				playBtn.addEventListener("click", () => {
+					if (audio.paused) {
+						audio.play();
+						playBtn.src = "pause.svg";
+						interval = setInterval(randomizeHeights, 200); // Randomize heights every 200ms
+					} else {
+						audio.pause();
+						playBtn.src = "song_play.svg";
+						clearInterval(interval);
+					}
+				});
+
 				document.addEventListener("click", function (e) {
-					console.log(e.target);
-					if (e.target.classList.contains("play_alt")) {
-						const clickedSong = e.target.id;
-						const song_no = clickedSong[clickedSong.length - 1] - 1;
-						const artist = localStorage.parent_id;
-						const parentElement = e.target.closest(".list_left");
-						const songNameElement = parentElement.querySelector(".song_name");
-						const song_name = songNameElement.id;
-						document.getElementById(song_name).style.color = "greenyellow";
-						console.log(
-							"Clicked element ID ==>",
-							clickedSong,
-							"song number ==>",
-							song_no,
-							artist
-						);
-						console.log(clickedSong[clickedSong.length - 1]);
-						// console.log(play);
-						main(`${artist}`, song_no, `${clickedSong}`);
+					if (
+						// e.target.classList.contains("play_alt") ||
+						(e.target.id && /\d+$/.test(e.target.id)) ||
+						e.target == nextBtn ||
+						e.target == previousBtn
+					) {
+						if (e.target == previousBtn && song_no > 0) {
+							if (currentSong) {
+								currentSong.pause();
+								currentSong.currentTime = 0;
+								clearInterval(interval);
+								clickedSongId.style.display = "flex";
+								clickedSongText.style.color = "white";
+							}
+
+							song_no = song_no - 1;
+							clickedSong = `play_alt${song_no + 1}`;
+							song_name = `song_name${song_no + 1}`;
+
+							// if (clickedSongId) {
+							// 	clickedSongId.style.display = "flex";
+							// 	clickedSongText.style.color = "white";
+							// }
+
+							clearInterval(interval);
+							main(`${artist}`, song_no, `${clickedSong}`, song_name);
+						}
+						if (e.target == nextBtn && song_no < info[artist][0].length - 1) {
+							if (currentSong) {
+								currentSong.pause();
+								currentSong.currentTime = 0;
+								clearInterval(interval);
+								clickedSongId.style.display = "flex";
+								clickedSongText.style.color = "white";
+							}
+
+							song_no = song_no + 1;
+							clickedSong = `play_alt${song_no + 1}`;
+							song_name = `song_name${song_no + 1}`;
+
+							// if (clickedSongId) {
+							// 	clickedSongId.style.display = "flex";
+							// 	clickedSongText.style.color = "white";
+							// }
+
+							clearInterval(interval);
+							main(`${artist}`, song_no, `${clickedSong}`, song_name);
+						}
+
+						// if (e.target.classList.contains("play_alt")) {
+						if (e.target.id && /\d+$/.test(e.target.id)) {
+							clickedSong = e.target.id;
+							song_no = clickedSong[clickedSong.length - 1] - 1;
+
+							try {
+								artist = localStorage.parent_id;
+								const parentElement = e.target.closest(".list_left");
+								const songNameElement = parentElement.querySelector(".song_name");
+								song_name = songNameElement.id;
+								if (clickedSongId) {
+									clickedSongId.style.display = "flex";
+									clickedSongText.style.color = "white";
+								}
+							} catch (error) {
+								console.log("Clicked list_right");
+							}
+
+							clearInterval(interval);
+							main(`${artist}`, song_no, `${clickedSong}`, song_name);
+						}
 					}
 				});
 			}
 			new_page();
-		}, 50);
+		}, 1);
 	}
 });
