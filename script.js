@@ -26,7 +26,7 @@ let secondsToMinutesSeconds = function (seconds) {
 };
 
 async function fetchData() {
-	let data = await fetch("http://127.0.0.1:3000/data.json/");
+	let data = await fetch("https://splendorous-kitten-704307.netlify.app/data.json");
 	let info = await data.json();
 	return info;
 }
