@@ -104,6 +104,23 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			});
 
+			let scrollSpeed = 12; // Higher value = slower scrolling
+
+			const container = document.getElementById("scroll_sec");
+
+			container.addEventListener(
+				"wheel",
+				(event) => {
+					event.preventDefault();
+					let scrollAmount = event.deltaY / scrollSpeed;
+					container.scrollBy({
+						top: scrollAmount,
+						behavior: "auto"
+					});
+				},
+				{ passive: false }
+			);
+
 			// Array of 5 vibrant colors
 			const colors = ["#ff0080", "#00ffbf", "#8000ff", "#ffbf00", "#00bfff"]; // Array of 5 vibrant colors
 			let previous_playedSong = null; // Keeps track of the previously played song

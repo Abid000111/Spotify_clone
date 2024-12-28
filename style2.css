@@ -17,6 +17,7 @@ body {
 	background-color: black;
 	color: white;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 .search_click {
@@ -348,7 +349,7 @@ body {
 #three_dot_drop_down {
 	position: absolute;
 	background-color: rgba(255, 255, 255, 0.425);
-	width: 9vw;
+	width: 173px;
 	left: 5px;
 	top: 50px;
 	padding: 4px;
@@ -734,6 +735,15 @@ body {
 	#volume_icon {
 		bottom: 8.5%;
 		right: 3.2%;
+	}
+
+	#bottom_sec {
+		height: calc(100vh - 32.7vh);
+		overflow: auto;
+	}
+
+	#scroll_sec {
+		height: calc(67.3vh - 115px);
 	}
 }
 
