@@ -1,7 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Delius&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Send+Flowers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Delius&family=Send+Flowers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Delius&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Send+Flowers&display=swap");
 
 * {
@@ -52,6 +48,18 @@ body {
 	width: fit-content;
 	filter: invert(1);
 	cursor: pointer;
+	display: inline-block;
+	color: black;
+	font-weight: 900;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#spotify img {
+	width: 30px;
 }
 
 .svg {
@@ -78,7 +86,7 @@ body {
 }
 
 #search_text {
-	height: 2vw;
+	height: 36px;
 	padding: 5px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -88,8 +96,8 @@ body {
 }
 
 #search_icon {
-	height: 2vw;
-	width: 2vw;
+	height: 36px;
+	width: 36px;
 	padding: 5px;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.664);
 	border-top: 2px solid rgba(255, 255, 255, 0.664);
@@ -110,8 +118,11 @@ body {
 .search_click {
 	height: 50px;
 	width: 150px;
+	font-weight: 600;
+	font-size: 15px;
 	border-radius: 10px;
 	text-align: center;
+	color: black;
 	background-color: red;
 	position: absolute;
 	top: 110%;
@@ -283,6 +294,77 @@ body {
 	gap: 10px;
 }
 
+.back_arrow {
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	background-color: rgb(0, 0, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.forward_arrow {
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	rotate: 180deg;
+	background-color: rgb(0, 0, 0);
+	position: relative;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.back_arrow img {
+	filter: invert(1);
+	width: 17px;
+}
+
+.forward_arrow img {
+	filter: invert(1);
+	width: 17px;
+}
+
+.back_hidden {
+	border-radius: 8px;
+	height: 27px;
+	width: 77px;
+	text-align: center;
+	position: absolute;
+	bottom: -100%;
+	left: -40%;
+	background-color: #2e2c2c;
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.forward_hidden {
+	border-radius: 8px;
+	height: 27px;
+	width: 100px;
+	text-align: center;
+	position: absolute;
+	top: -100%;
+	background-color: #2e2c2c;
+	rotate: 180deg;
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.forward_arrow:hover .forward_hidden,
+.back_arrow:hover .back_hidden {
+	opacity: 1;
+	pointer-events: auto;
+}
+
 #new_nav {
 	display: none;
 }
@@ -412,7 +494,6 @@ body {
 	height: 100%;
 	width: 100%;
 	border: 2px solid black;
-	/* border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%; */
 	border-radius: 100%;
 	box-shadow: 0px 0px 17px 2px red;
 	animation: border_animation 5s linear infinite;
@@ -716,6 +797,7 @@ body {
 	.search_click {
 		top: 12%;
 		width: 150px;
+		font-weight: 800;
 	}
 
 	.nav_login {
@@ -774,7 +856,7 @@ body {
 
 	.content {
 		height: inherit;
-		width: 41vw;
+		width: 91px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -783,10 +865,50 @@ body {
 		padding-left: 8px;
 	}
 
+	.content_img {
+		width: 90%;
+	}
+
+	.content_play {
+		border-radius: 100%;
+		background-color: red;
+		height: 27px;
+		width: 27px;
+		position: absolute;
+		right: 3%;
+		bottom: 0%;
+		opacity: 1;
+		transition: 0.25s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.content:hover .content_play {
+		border-radius: 100%;
+		background-color: red;
+		height: 27px;
+		width: 27px;
+		position: absolute;
+		right: 3%;
+		bottom: 0%;
+		opacity: 1;
+		transition: 0.25s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.content_name {
 		font-weight: 100;
 		font-size: 13px;
 		height: auto;
+	}
+
+	.content_name {
+		font-weight: 100;
+		font-size: 9px;
+		min-width: 83px;
 	}
 
 	.content_name h4 {

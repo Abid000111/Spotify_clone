@@ -26,7 +26,9 @@ let secondsToMinutesSeconds = function (seconds) {
 };
 
 async function fetchData() {
-	let data = await fetch("https://splendorous-kitten-704307.netlify.app/data.json");
+	let data = await fetch(
+		"https://splendorous-kitten-704307.netlify.app/data.json"
+	);
 	let info = await data.json();
 	return info;
 }
@@ -84,6 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 					}, 1500);
 				} else if (parentId == "back") {
 					window.history.back();
+				} else if (e.target.classList == "heart") {
+					if (e.target.style.fill == "red") {
+						e.target.style.fill = "white";
+					} else {
+						e.target.style.fill = "red";
+					}
 				}
 			});
 
@@ -428,6 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					div3.appendChild(time);
 					let three_p = document.createElement("p");
 					three_p.id = "three_p" + `${i}`;
+					three_p.className = "three_p";
 					let three = `<svg class="three_svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
 					<path d="M5 10C3.9 10 3 10.9 3 12C3 13.1 3.9 14 5 14C6.1 14 7 13.1 7 12C7 10.9 6.1 10 5 10ZM19 10C17.9 10 17 10.9 17 12C17 13.1 17.9 14 19 14C20.1 14 21 13.1 21 12C21 10.9 20.1 10 19 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"></path>
 					</svg>`;
@@ -458,17 +467,35 @@ document.addEventListener("DOMContentLoaded", () => {
 						currentSong.currentTime = 0;
 						clearInterval(interval);
 						clickedSongId.style.display = "flex";
-						clickedSongText.style.color = "white";
+						try {
+							clickedSongText.style.color = "white";
+						} catch (error) {
+							console.log("Clicked list_right");
+						}
 					}
 
 					clickedSongId = document.getElementById(`play_alt${number + 1}`);
 					clickedSongId.style.display = "none";
 					clickedSongText = document.getElementById(song_name);
-					clickedSongText.style.color = "greenyellow";
+					try {
+						clickedSongText.style.color = "greenyellow";
+					} catch (error) {
+						console.log("Clicked list_right");
+					}
 					let songs = await fetchData();
 					audio.src = songs[artist][0][number];
 
 					audio.play();
+
+					audio.volume = 0.5; // Default volume
+
+					// Volume control
+					const volumeSlider = document.getElementById("volume");
+					volumeSlider.addEventListener("input", (event) => {
+						const volume = event.target.value;
+						audio.volume = volume; // Adjust audio volume
+						console.log(`Volume set to: ${volume}`);
+					});
 
 					currentSong = audio;
 
@@ -482,6 +509,16 @@ document.addEventListener("DOMContentLoaded", () => {
 					document.getElementById("song_name").innerHTML =
 						"Song: " + songs[artist][1][0][track_name];
 
+					console.log(songs[artist][1][0].name, songs[artist][1][0][track_name]);
+
+					document.querySelectorAll(".song_info h1").forEach((h1) => {
+						h1.innerHTML =
+							"Song: " +
+							songs[artist][1][0][track_name] +
+							" || Artist: " +
+							songs[artist][1][0].name;
+					});
+
 					playBtnFunc();
 
 					audio.addEventListener("timeupdate", () => {
@@ -491,6 +528,9 @@ document.addEventListener("DOMContentLoaded", () => {
 						total_time.innerText = total_time_var;
 
 						document.querySelector("#circle").style.left =
+							(audio.currentTime / audio.duration) * 100 + "%";
+
+						document.getElementById("golden").style.width =
 							(audio.currentTime / audio.duration) * 100 + "%";
 					});
 
