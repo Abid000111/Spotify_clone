@@ -775,6 +775,15 @@ body {
 }
 
 @media (max-width: 500px) {
+	#cursor {
+		display: none;
+	}
+	
+	#cursor-blur {
+		display: none;
+	}
+
+
 	#container {
 		display: flex;
 		flex-direction: column;
