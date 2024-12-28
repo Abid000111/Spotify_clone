@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (parentId == "forward") {
 			window.history.forward();
 		} else if (parentId == "back") {
-			window.history.back();
+			window.location.href = "index.html";
 		}
 	});
 
