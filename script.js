@@ -4,6 +4,15 @@ let audio = new Audio();
 let playBtn = document.getElementById("play");
 let previousBtn = document.getElementById("previous");
 let nextBtn = document.getElementById("next");
+let cursor = document.querySelector("#cursor");
+let cursorBlur = document.querySelector("#cursor-blur");
+
+document.addEventListener("mousemove", function (dets) {
+	cursor.style.left = dets.x + "px";
+	cursor.style.top = dets.y + "px";
+	cursorBlur.style.left = dets.x + "px";
+	cursorBlur.style.top = dets.y + "px";
+});
 
 function getRandomHexColor() {
 	return `#${Math.floor(Math.random() * 16777215)

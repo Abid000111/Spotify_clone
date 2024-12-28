@@ -4,10 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Musicify</title>
-		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="utility.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div id="cursor"></div>
+		<div id="cursor-blur"></div>
+
 		<div id="container">
 			<div class="left">
 				<div class="upper">
@@ -216,7 +219,7 @@
 						</div>
 						<div class="content_section">
 							<div id="armaan_malik" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -228,7 +231,7 @@
 								</div>
 							</div>
 							<div id="ed_sheeran" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -240,7 +243,7 @@
 								</div>
 							</div>
 							<div id="arijit_singh" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -252,7 +255,7 @@
 								</div>
 							</div>
 							<div id="jasleen_royal" class="content content_4">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -264,7 +267,7 @@
 								</div>
 							</div>
 							<div id="atif_aslam" class="content content_5">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -276,8 +279,13 @@
 								</div>
 							</div>
 							<div id="alan_walker" class="content content_6">
-								<div class="content_img child">
-									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
+								<div class="content_img_square child">
+									<img
+										class="content_img_square_img"
+										src="alan.webp"
+										alt="Alan Walker"
+										loading="lazy"
+									/>
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
 									</div>
@@ -288,7 +296,7 @@
 								</div>
 							</div>
 							<div id="ali_gatie" class="content content_7">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -402,7 +410,7 @@
 						</div>
 						<div class="content_section">
 							<div id="armaan_malik" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="armaan.webp" alt="Armaan Malik" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -414,7 +422,7 @@
 								</div>
 							</div>
 							<div id="ed_sheeran" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="ed_sheeran.webp" alt="Ed Sheeran" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -426,7 +434,7 @@
 								</div>
 							</div>
 							<div id="arijit_singh" class="content">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="arijit.webp" alt="Arijit Singh" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -438,7 +446,7 @@
 								</div>
 							</div>
 							<div id="jasleen_royal" class="content content_4">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="jasleen.webp" alt="Jasleen Royal" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -450,7 +458,7 @@
 								</div>
 							</div>
 							<div id="atif_aslam" class="content content_5">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="atif.webp" alt="Atif Aslam" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -462,7 +470,7 @@
 								</div>
 							</div>
 							<div id="alan_walker" class="content content_6">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="alan.webp" alt="Alan Walker" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
@@ -474,7 +482,7 @@
 								</div>
 							</div>
 							<div id="ali_gatie" class="content content_7">
-								<div class="content_img child">
+								<div class="content_img_square child">
 									<img src="ali.webp" alt="Ali Gatie" loading="lazy" />
 									<div class="content_play child">
 										<img src="play.svg" alt="Play" loading="lazy" />
