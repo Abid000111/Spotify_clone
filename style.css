@@ -20,7 +20,7 @@ body {
 #cursor {
 	height: 17px;
 	width: 17px;
-	background-color: rgba(255, 0, 0, 0.596);
+	background-color: rgba(114, 206, 91, 0.596);
 	/* background-color: red; */
 	border-radius: 50%;
 	transform: translateX(-50%) translateY(-50%);
@@ -34,7 +34,7 @@ body {
 	height: 400px;
 	width: 400px;
 	/* background-color: #96c11e48; */
-	background-color: rgba(255, 0, 0, 0.26);
+	background-color: rgba(27, 190, 62, 0.281);
 	border-radius: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	transition: all linear 0.3s;
