@@ -521,7 +521,7 @@ body {
 .content_img img {
 	height: 100%;
 	width: 100%;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	border-radius: 100%;
 	box-shadow: 0px 0px 17px 2px red;
 	animation: border_animation 5s linear infinite;
@@ -538,7 +538,7 @@ body {
 .content_img_square img {
 	/* height: 100%; */
 	width: 100%;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	border-radius: 12px;
 	box-shadow: 0px 0px 17px 2px red;
 	animation: shadow_animation 5s linear infinite;

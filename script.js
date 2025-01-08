@@ -200,13 +200,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			let playBtnFunc = function () {
 				if (audio.src == "") {
-					playBtn.src = "song_play.svg";
+					playBtn.src = "svg/song_play.svg";
 					playBtn.style.pointerEvents = "none";
 					previousBtn.style.pointerEvents = "none";
 					nextBtn.style.pointerEvents = "none";
 					document.getElementById("circle").style.display = "none";
 				} else {
-					playBtn.src = "pause.svg";
+					playBtn.src = "svg/pause.svg";
 					playBtn.style.pointerEvents = "auto";
 					previousBtn.style.pointerEvents = "auto";
 					nextBtn.style.pointerEvents = "auto";
@@ -569,7 +569,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					audio.addEventListener("ended", function () {
 						clickedSongId.style.display = "flex";
 						clickedSongText.style.color = "white";
-						playBtn.src = "song_play.svg";
+						playBtn.src = "svg/song_play.svg";
 						clearInterval(interval);
 						bars.forEach((bar) => {
 							bar.style.height = "50px"; // Reset to default height
@@ -580,11 +580,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				playBtn.addEventListener("click", () => {
 					if (audio.paused) {
 						audio.play();
-						playBtn.src = "pause.svg";
+						playBtn.src = "svg/pause.svg";
 						interval = setInterval(randomizeHeights, 200); // Randomize heights every 200ms
 					} else {
 						audio.pause();
-						playBtn.src = "song_play.svg";
+						playBtn.src = "svg/song_play.svg";
 						clearInterval(interval);
 					}
 				});
