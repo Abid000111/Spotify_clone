@@ -226,7 +226,8 @@
 			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3",
 			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3",
 			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3",
-			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3"
+			"https://raw.githubusercontent.com/Abid000111/spotify_songs/main/Ranjha%20(Shershaah)_64-(PagalWorld.Ink).mp3",
+			"songs/Sahiba.mp3"
 		],
 		[
 			{
@@ -259,6 +260,10 @@
 				"time_6": "3:48",
 				"img_6": "img/ranjha.webp",
 				"view_6": "8,754,808",
+				"song_7": "Sahiba",
+				"time_7": "4:19",
+				"img_7": "img/Sahiba.png",
+				"view_7": "8,754,808",
 				"bg": "linear-gradient(188deg, rgba(113,21,21,1) 0%, rgba(0,0,0,1) 0%, rgba(113,21,21,1) 0%, rgba(113,21,21,1) 23%, rgba(185,81,81,1) 54%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)"
 			}
 		]

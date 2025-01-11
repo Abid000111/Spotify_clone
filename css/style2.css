@@ -20,10 +20,6 @@ body {
 	scroll-behavior: smooth;
 }
 
-.search_click {
-	top: -10%;
-}
-
 .bottom {
 	position: relative;
 }
@@ -610,8 +606,7 @@ body {
 	position: relative;
 	cursor: pointer;
 	z-index: 1;
-	margin-right: 12px;
-	margin-left: 4px;
+	margin-right: 8px;
 }
 
 #golden {
@@ -1015,6 +1010,10 @@ body {
 	#total_time {
 		height: 15px;
 		width: 33px;
+	}
+
+	.song_buttons{
+		gap: 22px;
 	}
 
 	.song_buttons img {

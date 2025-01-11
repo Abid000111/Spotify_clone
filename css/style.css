@@ -21,10 +21,9 @@ body {
 	height: 17px;
 	width: 17px;
 	background-color: rgba(114, 206, 91, 0.596);
-	/* background-color: red; */
 	border-radius: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	transition: all linear 0.1s;
+	transition: all linear 0.5s;
 	position: fixed;
 	z-index: 11;
 	pointer-events: none;
@@ -33,11 +32,10 @@ body {
 #cursor-blur {
 	height: 400px;
 	width: 400px;
-	/* background-color: #96c11e48; */
 	background-color: rgba(27, 190, 62, 0.281);
 	border-radius: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	transition: all linear 0.3s;
+	transition: all linear 0.25s;
 	position: fixed;
 	filter: blur(70px);
 	z-index: 100000;
@@ -143,23 +141,6 @@ body {
 	filter: invert(1);
 }
 
-.search_click {
-	height: 50px;
-	width: 150px;
-	font-weight: 600;
-	font-size: 15px;
-	border-radius: 10px;
-	text-align: center;
-	color: black;
-	background-color: red;
-	position: absolute;
-	top: 110%;
-	z-index: 1000;
-	opacity: 1;
-	pointer-events: none;
-	display: none;
-}
-
 .bottom {
 	background-color: rgb(18, 18, 18);
 	height: 83vh;
@@ -179,26 +160,7 @@ body {
 	align-items: center;
 }
 
-.plus {
-	width: 23px;
-	height: 22px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 70%;
-}
-
-.plus img {
-	filter: invert();
-	width: 17px;
-}
-
-.plus:hover {
-	cursor: pointer;
-	background-color: rgba(255, 255, 255, 0.322);
-}
-
-.bottom2 {
+#bottom2 {
 	height: 45.395vh;
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -208,37 +170,43 @@ body {
 	scrollbar-width: thin;
 	scrollbar-color: #55555563 rgba(27, 27, 27, 0);
 	overflow-y: scroll;
+	color: white;
 }
 
-.bottom_box {
-	width: 97%;
+.song-item {
+	height: 95px;
+	width: 320px;
+	display: flex;
+	position: relative;
+	background-color: #b6ffff29;
+	padding-top: 10px;
 	border-radius: 10px;
-	background-color: rgb(36, 36, 36);
-	padding: 19px;
-}
-
-.bottom_box_p1 {
-	font-size: 18px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-.bottom_box_p2 {
-	margin-bottom: 10px;
-}
-
-.bottom_box_button {
-	border: none;
-	border-radius: 20px;
-	height: 35px;
-	padding-left: 13px;
-	padding-right: 13px;
-	font-weight: bold;
-}
-
-.bottom_box_button:hover {
-	scale: 1.02;
+	padding-left: 10px;
 	cursor: pointer;
+	transition: 0.5s;
+}
+
+.song-item:hover {
+	background-color: #9eebeb54;
+}
+
+.song-img img {
+	height: 75px;
+	border-radius: 5px;
+}
+
+.time {
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 45px;
+	bottom: 9px;
+}
+
+.song-details {
+	margin-left: 10px;
 }
 
 .bottom3 {
@@ -521,7 +489,7 @@ body {
 .content_img img {
 	height: 100%;
 	width: 100%;
-	/* border: 1px solid black; */
+	border: 1.5px solid rgba(255, 255, 255, 0.1);
 	border-radius: 100%;
 	box-shadow: 0px 0px 17px 2px red;
 	animation: border_animation 5s linear infinite;
@@ -536,9 +504,8 @@ body {
 }
 
 .content_img_square img {
-	/* height: 100%; */
 	width: 100%;
-	/* border: 1px solid black; */
+	border: 1.5px solid rgba(255, 255, 255, 0.1);
 	border-radius: 12px;
 	box-shadow: 0px 0px 17px 2px red;
 	animation: shadow_animation 5s linear infinite;
@@ -637,7 +604,7 @@ body {
 .content_play img {
 	animation: shadow_animation 5s linear infinite;
 	border-radius: 100%;
-	border: 0.5px solid black;
+	border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .content:hover .content_play {
@@ -730,7 +697,7 @@ body {
 		height: 68.2vh;
 	}
 
-	.bottom2 {
+	#bottom2 {
 		height: 20vh;
 	}
 
@@ -778,11 +745,10 @@ body {
 	#cursor {
 		display: none;
 	}
-	
+
 	#cursor-blur {
 		display: none;
 	}
-
 
 	#container {
 		display: flex;
@@ -794,6 +760,10 @@ body {
 
 	.left {
 		display: none;
+	}
+
+	#bottom2 {
+		display: none; /* JavaScript will override this */
 	}
 
 	.right {
@@ -821,7 +791,7 @@ body {
 
 	#spotify_nav img {
 		height: 10vw;
-		padding-right: 7px;
+		padding-right: 20px;
 	}
 
 	#search_box_nav {
@@ -832,7 +802,7 @@ body {
 
 	#search_text_nav {
 		height: 10vw;
-		width: 20vw;
+		width: 40vw;
 		padding: 5px;
 		font-weight: 500;
 		font-size: 10px;
@@ -863,38 +833,6 @@ body {
 		filter: invert(1);
 		height: 7vw;
 		opacity: 0.7;
-	}
-
-	.search_click {
-		top: 12%;
-		width: 150px;
-		font-weight: 800;
-	}
-
-	.nav_login {
-		padding: 5px;
-		gap: 3px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.signup {
-		font-size: 12px;
-		height: 25px;
-		width: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.login {
-		font-size: 12px;
-		height: 25px;
-		width: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.right_content {
