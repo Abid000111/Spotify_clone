@@ -363,10 +363,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				if (e.target.id === "home") {
 					window.history.back();
 				} else if (parentId == "search_icon") {
-					document.getElementById("search_click1").style.display = "block";
-					setTimeout(() => {
-						document.getElementById("search_click1").style.display = "none";
-					}, 1500);
+					// 
 				} else if (parentId == "back") {
 					window.history.back();
 				} else if (e.target.classList == "heart") {
