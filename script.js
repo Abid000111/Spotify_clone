@@ -130,7 +130,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 	let searchedAudio = new Audio();
 
-	if (window.location.pathname.includes("index.html")) {
+	if (
+		window.location.pathname.includes(
+			"index.html" || "https://splendorous-kitten-704307.netlify.app/"
+		)
+	) {
 		document.getElementById("bottom2").addEventListener("click", (event) => {
 			// Check if the clicked element is a song-item or its child
 			const clickedElement = event.target.closest(".song-item");
