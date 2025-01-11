@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 		// Convert search term to lowercase for case-insensitive comparison
 		const term = searchText.toLowerCase();
 
-		document.querySelector.apply(".bottom1").innerHTML =
+		document.querySelector(".bottom1").innerHTML =
 			`Showing results for ${searchText}`;
 
 		// Clear the previous results
