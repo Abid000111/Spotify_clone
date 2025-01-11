@@ -131,9 +131,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	let searchedAudio = new Audio();
 
 	if (
-		window.location.pathname.includes(
-			"index.html" || "https://splendorous-kitten-704307.netlify.app/"
-		)
+		window.location.href === "https://splendorous-kitten-704307.netlify.app/"
 	) {
 		document.getElementById("bottom2").addEventListener("click", (event) => {
 			// Check if the clicked element is a song-item or its child
@@ -166,6 +164,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const searchSong = function (searchText) {
 		// Convert search term to lowercase for case-insensitive comparison
 		const term = searchText.toLowerCase();
+
+		document.querySelector.apply(".bottom1").innerHTML =
+			`Showing results for ${searchText}`;
 
 		// Clear the previous results
 		results.length = 0;
