@@ -48,7 +48,8 @@ let secondsToMinutesSeconds = function (seconds) {
 // Function to fetch data from data.json
 async function fetchData() {
 	let data = await fetch(
-		// "https://splendorous-kitten-704307.netlify.app/data.json"
+		"https://splendorous-kitten-704307.netlify.app/data.json"
+		// "http://127.0.0.1:3000/data.json"
 	);
 	let info = await data.json();
 	return info;
@@ -362,8 +363,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 				const parentId = e.target.parentElement.id;
 				if (e.target.id === "home") {
 					window.history.back();
-				} else if (parentId == "search_icon") {
-					//
 				} else if (parentId == "back") {
 					window.history.back();
 				} else if (e.target.classList == "heart") {
